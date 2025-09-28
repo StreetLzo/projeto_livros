@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <h2>Lista de Livros</h2>
+    {% if livros %}
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>ID</th><th>Título</th><th>Autor</th><th>Ano</th><th>Categoria</th>
+            </tr>
+            {% for livro in livros %}
+            <tr>
+                <td>{{ livro.id }}</td>
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.ano }}</td>
+                <td>{{ livro.categoria }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Nenhum livro cadastrado.</p>
+    {% endif %}
+{% endblock %}

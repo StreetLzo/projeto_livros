@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Livros</title>
+</head>
+<body>
+    <h1>Cadastro de Livros</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Início</a> |
+        <a href="{{ url_for('listar') }}">Listar Livros</a> |
+        <a href="{{ url_for('adicionar') }}">Adicionar Livro</a>
+    </nav>
+    <hr>
+    {% block conteudo %}{% endblock %}
+</body>
+</html>

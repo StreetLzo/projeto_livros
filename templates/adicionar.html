@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <h2>Adicionar-livro</h2>
+    <form method="POST">
+        <label>Titulo:</label><br>
+        <input type="text" name="titulo" required><br><br>
+
+        <label>Autor:</label><br>
+        <input type="text" name="autor" required><br><br>
+
+        <label>Ano:</label><br>
+        <input type="number" name="ano" required><br><br>
+
+        <label>Categoria:</label><br>
+        <input type="text" name="categoria" required><br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+{% endblock %}
